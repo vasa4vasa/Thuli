@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ad_reg"
+    android:background="@drawable/as_reg_bg"
+    >
+    <ScrollView
+        android:id="@+id/ad_reg_sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ad_reg_linout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <ImageView
+                android:id="@+id/ad_reg_topimage"
+                android:layout_width="94dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:foregroundGravity="center"
+                app:srcCompat="@drawable/admin" />
+
+            <TextView
+                android:id="@+id/ad_reg_toptext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:breakStrategy="high_quality"
+                android:fontFamily="sans-serif"
+                android:foregroundGravity="center_vertical|clip_horizontal"
+                android:gravity="center"
+                android:text="Admin Register Panel"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ad_reg_lin1"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_namete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Name"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ad_reg_fn"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:onClick="us_reg_fnon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+
+
+                <EditText
+                    android:id="@+id/ad_reg_ln"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:onClick="us_reg_lnon"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_agln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_agete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Date OF Birth"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ad_reg_age"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="DD-MM-YYYY"
+                    android:inputType="date"
+                    android:onClick="us_reg_ageon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_geln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_gente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Gender"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp">
+
+                    <RadioButton
+                        android:id="@+id/ad_reg_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:onClick="us_reg_maleon"
+                        android:text="Male"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/ad_reg_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:onClick="us_reg_femaleon"
+                        android:text="Female"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/ad_reg_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:onClick="us_reg_otherson"
+                        android:text="Others"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_mbln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_mnte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Mobile Number"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ad_reg_mn"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/baseline_phone_android_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textColor="#ffffff"
+                    android:hint="Enter Your Mobile Number"
+                    android:inputType="phone"
+                    android:onClick="us_reg_mnon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_emln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_emte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Email-Id"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ad_reg_em"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:textColor="#ffffff"
+                    android:ems="10"
+                    android:hint="Enter Your Email-Id"
+                    android:inputType="textEmailAddress"
+                    android:onClick="us_reg_emon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ad_reg_hlin1"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_nate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Nationality"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/ad_reg_spin_nat"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/us_reg_spin_nat"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="Nationality"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_reg_hlin2"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_state"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="State"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/ad_reg_spin_sta"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="State"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_reg_hlin3"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_Diste"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="District"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/ad_reg_spin_dis"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="District"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_reg_hlin4"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_thate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Taluk"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/ad_reg_spin_tha"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="Thaluk"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_reg_hlin5"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_vte"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Village"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <Spinner
+                    android:id="@+id/ad_reg_spin_v"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="village"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ad_reg_addln"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ad_reg_addte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Address"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ad_reg_add"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="Door Number with Street Name"
+                    android:inputType="text"
+                    android:onClick="us_reg_addon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/ad_reg_pc"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:textColor="#ffffff"
+                    android:hint="Postal Code"
+                    android:inputType="number"
+                    android:onClick="us_reg_pcon"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ad_reg_imgln"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/us_reg_lin_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_add_24"
+                android:layout_margin="10dp"
+                android:clickable="true"
+
+                />
+
+            <TextView
+                android:id="@+id/ad_reg_imgte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Click to add image"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/ad_reg_btn"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/us_reg_btn"
+                android:onClick="us_signup_on"
+                android:text="Send request"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

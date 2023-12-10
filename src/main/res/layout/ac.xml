@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ac_con"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imgw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ac_lin"
+        android:layout_width="330dp"
+        android:layout_height="291dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:drawableLeft="@drawable/sharp_admin"
+            android:id="@+id/admin"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="60dp"
+            android:alpha="1"
+            android:background="@drawable/ac_lin_but"
+            android:fontFamily="sans-serif"
+            android:onClick="admin_on"
+            android:padding="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="ADMIN"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <Button
+            android:drawableLeft="@drawable/baseline_supervisor_account_24"
+            android:id="@+id/users"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="1"
+            android:background="@drawable/ac_lin_but"
+            android:fontFamily="sans-serif"
+            android:onClick="admin_on"
+            android:padding="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:paddingLeft="60dp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="USERS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

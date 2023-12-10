@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/us_reg_conout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_reg"
+    android:background="@drawable/us_reg_con_bg"
+    >
+
+    <ScrollView
+        android:id="@+id/us_reg_sb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/us_reg_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/us_reg_topimage"
+                android:layout_width="94dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:foregroundGravity="center"
+                app:srcCompat="@drawable/user" />
+
+            <TextView
+                android:id="@+id/us_reg_toptext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:breakStrategy="high_quality"
+                android:fontFamily="sans-serif"
+                android:foregroundGravity="center_vertical|clip_horizontal"
+                android:gravity="center"
+                android:text="Users Sign Up Panel"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/naln"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_namete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Name"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/us_reg_fn"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:textColor="#ffffff"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:onClick="us_reg_fnon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    />
+
+
+                <EditText
+                    android:id="@+id/us_reg_ln"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:onClick="us_reg_lnon"
+                    android:textColorHint="#eeeeee"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_agete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Date OF Birth"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/us_reg_age"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="DD-MM-YYYY"
+                    android:inputType="date"
+                    android:onClick="us_reg_ageon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/geln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_gente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Gender"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp">
+
+                    <RadioButton
+                        android:id="@+id/us_reg_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:onClick="us_reg_maleon"
+                        android:text="Male"
+                        android:textColor="#EEEEEE"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/us_reg_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:onClick="us_reg_femaleon"
+                        android:text="Female"
+                        android:textColor="#EEEEEE"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/us_reg_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:onClick="us_reg_otherson"
+                        android:text="Others"
+                        android:textColor="#EEEEEE"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mbln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_mnte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Mobile Number"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/us_reg_mn"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/baseline_phone_android_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Your Mobile Number"
+                    android:inputType="phone"
+                    android:onClick="us_reg_mnon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emln"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_emte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Email-Id"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/us_reg_em"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Your Email-Id"
+                    android:inputType="textEmailAddress"
+                    android:onClick="us_reg_emon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/us_reg_hlin1"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_nate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Nationality"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/us_reg_spin_nat"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/us_reg_spin_nat"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="Nationality"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/us_reg_hlin2"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_state"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="State"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/us_reg_spin_sta"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="State"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/us_reg_hlin3"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_Diste"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="District"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/us_reg_spin_dis"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="District"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/us_reg_hlin4"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_thate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Taluk"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/us_reg_spin_tha"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="Thaluk"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/us_reg_hlin5"
+                android:layout_width="360dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/us_reg_vte"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Village"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/us_reg_spin_v"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/reg_edittext"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="village"
+                    android:padding="4dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addln"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Address"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/add"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="Door Number with Street Name"
+                    android:inputType="text"
+                    android:onClick="us_reg_addon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/pc"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:hint="Postal Code"
+                    android:textColor="#ffffff"
+                    android:inputType="number"
+                    android:onClick="us_reg_pcon"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pwdln"
+                android:layout_width="360dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/us_reg_lin_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pwdte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Username and Password"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/us_usname"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:textColor="#ffffff"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:onClick="us_reg_usdon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textColor="#ffffff"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:onClick="us_reg_pwdon"
+                    android:paddingTop="5dp"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/cpwd"
+                    android:layout_width="330dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/reg_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:textColor="#ffffff"
+                    android:ems="10"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:onClick="us_reg_cpwdon"
+                    android:textColorHint="#EEEEEE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/us_reg_btn"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/us_reg_btn"
+                android:onClick="us_signup_on"
+                android:text="SIGN UP"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

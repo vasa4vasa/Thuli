@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ad_log"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="false"
+    android:scrollbars="vertical"
+    tools:context=".alog">
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ad_log_in"
+            android:layout_width="375dp"
+            android:layout_height="568dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/ac_lin_bor"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/adimg"
+                android:layout_width="94dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/admin"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/adtext1"
+                android:layout_width="243dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif"
+                android:text="Admin Sign In Panel"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ad_uu"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Admin Id"
+                android:inputType="text"
+                android:onClick="ad_uuon"
+                android:textColorHint="#757373"
+                android:textSize="20dp"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/ad_upass"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/baseline_lock_241"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="text|textPassword"
+                android:onClick="ad_upasson"
+                android:singleLine="false"
+                android:textColorHint="#757373"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/ad_mn"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/baseline_phone_android_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Mobile number"
+                android:inputType="number"
+                android:onClick="ad_upasson"
+                android:singleLine="false"
+                android:textColorHint="#757373"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/adtext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:singleLine="true"
+                android:text="Forgot Password?"
+                android:textColor="#00ccff"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/in_lin_hori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/adtext3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:text="Not admin yet?"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/adtext4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:clickable="true"
+                    android:onClick="adregon"
+                    android:text="Request access."
+                    android:textColor="#00ccff"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/ad_signin"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ac_lin_but"
+                android:drawableRight="@drawable/baseline_login_white"
+                android:drawablePadding="0dp"
+                android:onClick="ad_signin_on"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="  SIGN IN"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/other_activity_fr"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

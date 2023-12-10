@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/au_con0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/au_con"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e7feff"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/au_con1">
+
+        <TextView
+            android:id="@+id/au_wel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="WELCOME"
+            android:textAllCaps="true"
+            android:textColor="#89cff0"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.087" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/au_con1"
+            android:layout_width="318dp"
+            android:layout_height="250dp"
+            android:background="@drawable/au_bor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/au_wel"
+            app:layout_constraintVertical_bias="0.283">
+
+            <Button
+                android:id="@+id/au_ad"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:background="@drawable/au_but"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="au_adb"
+                android:text="ADMIN"
+                android:textColor="#f0ffff"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <Button
+                android:id="@+id/au_us"
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:background="@drawable/au_but"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="au_usb"
+                android:text="USER"
+                android:textColor="#f0ffff"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/au_ad"
+                app:layout_constraintVertical_bias="0.446" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
